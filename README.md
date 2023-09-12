@@ -1,4 +1,4 @@
-# Welcome to [Meetings]
+# Welcome to [Meetings](https://meetings.gq)
 
 ## Why Choose Us?
 
@@ -9,29 +9,12 @@ At [Your Video Conferencing App], we are committed to providing you with an exce
 - **Cross-Platform:** Use our app on your preferred device – desktop, mobile, or tablet – with a seamless transition.
 
 ### Rich Features
-
-####Participant Viewing
-- View all participants in a grid or gallery layout.
-- Easily switch between active speakers or focus on specific participants.
-- **Screen Sharing:** Share your screen to present documents, slideshows, or applications, and collaborate in real-time.
-- **File Sharing:** Seamlessly share files and documents during meetings, and access a shared repository of documents for easy reference.
-- **Chats:** Engage in text-based conversations with participants and create group chats for efficient discussions.
-- **Recordings:** Record your meetings for future reference or sharing with absent participants and store recordings securely.
-- **Reactions:** Express emotions and reactions using emojis, providing non-verbal feedback during discussions.
-- **Landing Pages:** Customize landing pages for scheduled meetings, including agendas, important information, and branding.
-- **Chalkboards:** Collaboratively draw and annotate on a shared virtual whiteboard to visualize ideas and concepts.
-- **Surveys:** Conduct polls and surveys during meetings, gather feedback, and make data-driven decisions.
-- **Virtual Background Images:** Choose from a library of virtual backgrounds or upload your own for privacy and professionalism.
-- **Transcripts:** Automatically generate meeting transcripts, search, review, and reference discussions effortlessly.
-- **Keyboard Shortcut Configuration:** Personalize keyboard shortcuts for convenience and increased productivity.
-- **Notifications:** Receive real-time notifications for meeting invitations, messages, and updates to stay informed and connected.
-- **Apps:** Integrate third-party applications for enhanced functionality and customize your workspace with your favorite tools.
-- **Picture-in-Picture View:** Enable picture-in-picture mode for multitasking during meetings and keep an eye on the video feed while using other features.
-- **Fullscreen Compatibility:** Optimize your viewing experience with fullscreen mode to eliminate distractions.
-- **Settings and Device Customizability:** Fine-tune platform settings to suit your preferences and customize audio, video, and other device settings.
+- **Powerful Collaboration:** Benefit from features like screen sharing, file sharing, virtual whiteboards, and more, making teamwork a breeze.
+- **High-Quality Video and Audio:** Enjoy crisp, clear video and audio quality, making every conversation feel like an in-person meeting.
 
 ### Personalization
 - **Customization:** Tailor your experience with personalized avatars, theme options, and notification settings.
+- **Virtual Backgrounds:** Add a touch of fun or professionalism to your meetings with our extensive virtual background library.
 
 ### Security and Privacy
 - **Data Protection:** Rest easy knowing that we prioritize your security and privacy with robust encryption and privacy controls.
@@ -43,19 +26,17 @@ At [Your Video Conferencing App], we are committed to providing you with an exce
 
 ## Getting Started
 
-Ready to start using [Your Video Conferencing App]? Here's what you can do:
+Ready to start using [Meetings](https://meetings.gq)? Here's what you can do:
 
-1. **Sign Up:** Create your account by following our simple registration process.
+1. **Open Site** Open our website or install our desktop application
 
 2. **Explore Features:** Take a tour of the platform and discover all the powerful features at your disposal.
 
-3. **Schedule a Meeting:** Organize your first meeting, customize the landing page, and invite participants.
+3. **Join a Meeting:** Easily join meetings with a single click, whether you're a host or participant.
 
-4. **Join a Meeting:** Easily join meetings with a single click, whether you're a host or participant.
+4. **Collaborate:** Share your screen, annotate documents, and use virtual whiteboards to collaborate effectively.
 
-5. **Collaborate:** Share your screen, annotate documents, and use virtual whiteboards to collaborate effectively.
-
-6. **Personalize:** Customize your profile, set your favorite virtual background, and configure notifications according to your preferences.
+5. **Personalize:** Set your favorite virtual background, and configure notifications or keyboard shortcuts according to your preferences.
 
 7. **Security:** Explore our robust security settings and privacy options for peace of mind.
 
