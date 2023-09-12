@@ -1,4 +1,4 @@
-# Welcome to [Your Video Conferencing App]
+# Welcome to [Meetings]
 
 ## Why Choose Us?
 
