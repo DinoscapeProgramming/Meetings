@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A meetings app with lots of features">
+    <meta name="theme-color" content="#000000">
+    <title>Meetings</title>
+    <link rel="stylesheet" href="/pages/desktopApp/style.css">
+    <link rel="icon" href="/public/favicon.png" type="image/png">
+    <link rel="manifest" href="/manifest.json">
+    <link rel="apple-touch-icon" href="/public/favicon.png">
+    <script defer>
+      const isElectron = Boolean(window.require);
+    </script>
+    <script defer src="/pages/desktopApp/script.js"></script>
+  </head>
+  <body>
+    <nav>
+      <a href="/" style="display: inline-block; margin-top: 57.5px;">
+        <img src="/public/logo.png" class="logo" id="logo" style="display: block;" alt="Logo">
+      </a>
+      <ul class="navigationLinks">
+        <li>
+          <a href="/">Home</a>
+        </li>
+        <li>
+          <a href="/features">Features</a>
+        </li>
+        <li>
+          <a href="/appPortal">App Portal</a>
+        </li>
+        <li>
+          <a href="/desktopApp">Desktop App</a>
+        </li>
+        <li>
+          <a href="/newsletter">Newsletter</a>
+        </li>
+        <li>
+          <a href="/contact">Contact</a>
+        </li>
+      </ul>
+    </nav>
+    <div class="installationContainer">
+      <h2 style="font-size: 27.5px;">Install Our PWA App</h2>
+      <button class="installationButton" id="installationButton">Install</button>
+    </div>
+    <section id="advantages" class="features">
+      <header>
+        <h2 style="font-size: 27.5px;">Why It's So Good</h2>
+      </header>
+      <div class="advantageCard">
+        <img src="/public/pwaAdvantages/offlineIcon.png" alt="Feature 1">
+        <h3 style="margin: -5px;">Offline Access</h3>
+        <p>Use our app without an internet connection</p>
+      </div>
+      <div style="display: flex; flex-direction: row; justify-content: center;">
+        <div class="advantageCard" style="margin-right: 5%;">
+          <img src="/public/pwaAdvantages/loadingIcon.png" alt="Feature 2" style="width: 120px;">
+          <h3 style="margin: -20px -5px -5px;">Fast Loading</h3>
+          <p>Experience quick load times and smooth interactions</p>
+        </div>
+        <div class="advantageCard" style="margin-left: 5%;">
+          <img src="/public/pwaAdvantages/noDownloadIcon.png" alt="Feature 3" style="width: 120px;">
+          <h3 style="margin: -8px;">No Downloads</h3>
+          <p>Avoid boring downloads, install our app directly from your browser</p>
+        </div>
+      </div>
+      <div style="display: flex; flex-direction: row; justify-content: center;">
+        <div class="advantageCard" style="margin-right: 5%;">
+          <img src="/public/pwaAdvantages/automaticUpdatesIcon.png" alt="Feature 3">
+          <h3 style="margin: -5px;">Automatic Updates</h3>
+          <p>Enjoy the latest features with automatic background updates</p>
+        </div>
+        <div class="advantageCard" style="margin-left: 5%;">
+          <img src="/public/pwaAdvantages/enhancedSecurityIcon.png" alt="Feature 3">
+          <h3 style="margin: -1.25px;">Enhanced Security</h3>
+          <p>Our PWA uses HTTPS to keep your interactions secure</p>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>

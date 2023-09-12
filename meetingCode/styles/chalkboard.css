@@ -1,0 +1,20 @@
+.chalkboardCanvas {
+  background-color: white;
+}
+
+.chalkboardToolbar {
+  display: flex;
+}
+
+.chalkboardCanvasInput {
+  display: flex;
+  justify-content: center;
+  width: 105px;
+  background-color: white;
+  align-items: center;
+  height: 42px;
+  margin: 2px 2.5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  transition: 250ms ease-in-out;
+}

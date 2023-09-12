@@ -1,0 +1,550 @@
+[
+  [
+    "Afrikaans (Südafrika)",
+    "af-ZA"
+  ],
+  [
+    "Albanisch (Albanien)",
+    "sq_AL"
+  ],
+  [
+    "Amharisch (Äthiopien)",
+    "am-ET"
+  ],
+  [
+    "Arabisch (Algerien)",
+    "ar-DZ"
+  ],
+  [
+    "Arabisch (Bahrain)",
+    "ar-BH"
+  ],
+  [
+    "Arabisch (Ägypten)",
+    "ar-EG"
+  ],
+  [
+    "Arabisch (Irak)",
+    "ar-IQ"
+  ],
+  [
+    "Arabisch (Israel)",
+    "ar-IL"
+  ],
+  [
+    "Arabisch (Jordanien)",
+    "ar-JO"
+  ],
+  [
+    "Arabisch (Kuwait)",
+    "ar-KW"
+  ],
+  [
+    "Arabisch (Libanon)",
+    "ar-LB"
+  ],
+  [
+    "Arabisch (Mauretanien)",
+    "ar-MR"
+  ],
+  [
+    "Arabisch (Marokko)",
+    "ar-MA"
+  ],
+  [
+    "Arabisch (Oman)",
+    "ar-OM"
+  ],
+  [
+    "Arabisch (Katar)",
+    "ar-QA"
+  ],
+  [
+    "Arabisch (Saudi-Arabien)",
+    "ar-SA"
+  ],
+  [
+    "Arabisch (Palästina)",
+    "ar-PS"
+  ],
+  [
+    "Arabisch (Tunesien)",
+    "ar-TN"
+  ],
+  [
+    "Arabisch (Vereinigte Arabische Emirate)",
+    "ar-AE"
+  ],
+  [
+    "Arabisch (Jemen)",
+    "ar_YE"
+  ],
+  [
+    "Armenisch (Armenien)",
+    "hy-AM"
+  ],
+  [
+    "Aserbaidschanisch (Aserbaidschan)",
+    "az-AZ"
+  ],
+  [
+    "Baskisch (Spanien)",
+    "eu-ES"
+  ],
+  [
+    "Bengalisch (Bangladesch)",
+    "bn-BD"
+  ],
+  [
+    "Bengalisch (Indien)",
+    "bn-IN"
+  ],
+  [
+    "Bosnisch (Bosnien und Herzegowina)",
+    "bs-BA"
+  ],
+  [
+    "Bulgarisch (Bulgarien)",
+    "bg-BG"
+  ],
+  [
+    "Birmanisch (Myanmar)",
+    "My-MM"
+  ],
+  [
+    "Katalanisch (Spanien)",
+    "ca-ES"
+  ],
+  [
+    "Chinesisch, Kantonesisch (traditionell, Hongkong)",
+    "yue-Hant-HK"
+  ],
+  [
+    "Chinesisch, Mandarin (vereinfacht, China)",
+    "zh-CN"
+  ],
+  [
+    "Chinesisch, Mandarin (traditionell, Taiwan)",
+    "zh-TW"
+  ],
+  [
+    "Kroatisch (Kroatien)",
+    "hr-HR"
+  ],
+  [
+    "Tschechisch (Tschechische Republik)",
+    "cs-CZ"
+  ],
+  [
+    "Dänisch (Dänemark)",
+    "da-DK"
+  ],
+  [
+    "Niederländisch (Belgien)",
+    "nl-BE"
+  ],
+  [
+    "Niederländisch (Niederlande)",
+    "nl-NL"
+  ],
+  [
+    "Englisch (Australien)",
+    "en-AU"
+  ],
+  [
+    "English (Canada)",
+    "en-CA"
+  ],
+  [
+    "English (Ghana)",
+    "en-GH"
+  ],
+  [
+    "Englisch (Hongkong)",
+    "en-HK"
+  ],
+  [
+    "‪English (India)",
+    "en-IN"
+  ],
+  [
+    "Englisch (Irland)",
+    "en-IE"
+  ],
+  [
+    "English (Kenya)",
+    "en-KE"
+  ],
+  [
+    "‪Englisch (Neuseeland)",
+    "en-NZ"
+  ],
+  [
+    "English (Nigeria)",
+    "en-NG"
+  ],
+  [
+    "Englisch (Pakistan)",
+    "en-PK"
+  ],
+  [
+    "English (Philippines)",
+    "en-PH"
+  ],
+  [
+    "Englisch (Singapur)",
+    "en-SG"
+  ],
+  [
+    "Englisch (Südafrika)",
+    "en-ZA"
+  ],
+  [
+    "English (Tanzania)",
+    "en-TZ"
+  ],
+  [
+    "Englisch (Vereinigtes Königreich)",
+    "en-GB"
+  ],
+  [
+    "Englisch (USA)",
+    "en-US"
+  ],
+  [
+    "Estnisch (Estland)",
+    "et-EE"
+  ],
+  [
+    "Philippinisch (Philippinen)",
+    "fil-PH"
+  ],
+  [
+    "Finnisch (Finnland)",
+    "fi-FI"
+  ],
+  [
+    "Französisch (Belgien)",
+    "fr-BE"
+  ],
+  [
+    "Französisch (Kanada)",
+    "fr-CA"
+  ],
+  [
+    "Französisch (Frankreich)",
+    "fr-FR"
+  ],
+  [
+    "Französisch (Schweiz)",
+    "fr-CH"
+  ],
+  [
+    "Galizisch (Spanien)",
+    "gl-ES"
+  ],
+  [
+    "Georgisch (Georgien)",
+    "ka-GE"
+  ],
+  [
+    "Deutsch (Österreich)",
+    "de-AT"
+  ],
+  [
+    "Deutsch (Deutschland)",
+    "de-DE"
+  ],
+  [
+    "Deutsch (Schweiz)",
+    "de-CH"
+  ],
+  [
+    "Griechisch (Griechenland)",
+    "el-GR"
+  ],
+  [
+    "Gujarati (Indien)",
+    "gu-IN"
+  ],
+  [
+    "Hebräisch (Israel)",
+    "iw-IL"
+  ],
+  [
+    "Hindi (Indien)",
+    "hi-IN"
+  ],
+  [
+    "Ungarisch (Ungarn)",
+    "hu-HU"
+  ],
+  [
+    "Isländisch (Island)",
+    "is-IS"
+  ],
+  [
+    "Indonesisch (Indonesien)",
+    "id-ID"
+  ],
+  [
+    "Italienisch (Italien)",
+    "it-IT"
+  ],
+  [
+    "Italienisch (Schweiz)",
+    "it_CH"
+  ],
+  [
+    "Japanisch (Japan)",
+    "ja-JP"
+  ],
+  [
+    "Javanisch (Indonesien)",
+    "jv-ID"
+  ],
+  [
+    "Kannada (Indien)",
+    "kn-IN"
+  ],
+  [
+    "Kasachisch (Kasachstan)",
+    "kk-KZ"
+  ],
+  [
+    "Khmer (Kambodscha)",
+    "km-KH"
+  ],
+  [
+    "Koreanisch (Südkorea)",
+    "ko-KR"
+  ],
+  [
+    "Lao (Laos)",
+    "lo-LA"
+  ],
+  [
+    "Lettisch (Lettland)",
+    "lv-LV"
+  ],
+  [
+    "Litauisch (Litauen)",
+    "lt-LT"
+  ],
+  [
+    "Mazedonisch (Nordmazedonien)",
+    "mk_MK"
+  ],
+  [
+    "Malaiisch (Malaysia)",
+    "ms-MY"
+  ],
+  [
+    "Malayalam (Indien)",
+    "ml-IN"
+  ],
+  [
+    "Mongolisch (Mongolei)",
+    "mn-MN"
+  ],
+  [
+    "Nepalesisch (Nepal)",
+    "ne-NP"
+  ],
+  [
+    "Norwegisch (Norwegen)",
+    "no Nein."
+  ],
+  [
+    "Persisch (Iran)",
+    "fa-IR"
+  ],
+  [
+    "Polnisch (Polen)",
+    "pl-PL"
+  ],
+  [
+    "Portugiesisch (Brasilien)",
+    "pt-BR"
+  ],
+  [
+    "Portugiesisch (Portugal)",
+    "pt-PT"
+  ],
+  [
+    "Panjabi (Gurmukhi, Indien)",
+    "pa-Guru-IN"
+  ],
+  [
+    "Rumänisch (Rumänien)",
+    "ro-RO"
+  ],
+  [
+    "Russisch (Russland)",
+    "ru-RU"
+  ],
+  [
+    "Serbisch (Serbien)",
+    "sr-RS"
+  ],
+  [
+    "Singhalesisch (Sri Lanka)",
+    "si-LK"
+  ],
+  [
+    "Slowakisch (Slowakei)",
+    "sk-SK"
+  ],
+  [
+    "Slowenisch (Slowenien)",
+    "sl-SI"
+  ],
+  [
+    "Spanisch (Argentinien)",
+    "es-AR"
+  ],
+  [
+    "Spanisch (Bolivien)",
+    "es-BO"
+  ],
+  [
+    "Spanisch (Chile)",
+    "es-CL"
+  ],
+  [
+    "Spanisch (Kolumbien)",
+    "es-CO"
+  ],
+  [
+    "Spanisch (Costa Rica)",
+    "es-CR"
+  ],
+  [
+    "Spanisch (Dominikanische Republik)",
+    "es-DO"
+  ],
+  [
+    "Spanisch (Ecuador)",
+    "es-EG"
+  ],
+  [
+    "Spanisch (El Salvador)",
+    "es-SV"
+  ],
+  [
+    "Spanisch (Guatemala)",
+    "es-GT"
+  ],
+  [
+    "Spanisch (Honduras)",
+    "es-HN"
+  ],
+  [
+    "Spanisch (Mexiko)",
+    "es-MX"
+  ],
+  [
+    "Spanisch (Nicaragua)",
+    "es-NI"
+  ],
+  [
+    "Spanisch (Panama)",
+    "es-PA"
+  ],
+  [
+    "Spanisch (Paraguay)",
+    "es-PY"
+  ],
+  [
+    "Spanisch (Peru)",
+    "es-PE"
+  ],
+  [
+    "Spanisch (Puerto Rico)",
+    "es-PR"
+  ],
+  [
+    "Spanisch (Spanien)",
+    "es-ES"
+  ],
+  [
+    "Spanisch (USA)",
+    "es-US"
+  ],
+  [
+    "Spanisch (Uruguay)",
+    "es-UY"
+  ],
+  [
+    "Spanisch (Venezuela)",
+    "es-VE"
+  ],
+  [
+    "Sundanesisch (Indonesien)",
+    "su-ID"
+  ],
+  [
+    "Swahili (Kenia)",
+    "sw-KE"
+  ],
+  [
+    "Swahili (Tansania)",
+    "sw-TZ"
+  ],
+  [
+    "Schwedisch (Schweden)",
+    "sv-SE"
+  ],
+  [
+    "Tamilisch (Indien)",
+    "ta-IN"
+  ],
+  [
+    "Tamilisch (Malaysia)",
+    "ta-MY"
+  ],
+  [
+    "Tamilisch (Singapur)",
+    "ta-SG"
+  ],
+  [
+    "Tamilisch (Sri Lanka)",
+    "ta-LK"
+  ],
+  [
+    "Telugu (Indien)",
+    "te-IN"
+  ],
+  [
+    "Thailändisch (Thailand)",
+    "th-TH"
+  ],
+  [
+    "Türkisch (Türkei)",
+    "tr-TR"
+  ],
+  [
+    "Ukrainisch (Ukraine)",
+    "uk-UA"
+  ],
+  [
+    "Urdu (Indien)",
+    "ur-IN"
+  ],
+  [
+    "Urdu (Pakistan)",
+    "ur-PK"
+  ],
+  [
+    "Usbekisch (Usbekistan)",
+    "uz-UZ"
+  ],
+  [
+    "Vietnamesisch (Vietnam)",
+    "vi-VN"
+  ],
+  [
+    "Zulu (Südafrika)",
+    "zu-ZA"
+  ]
+]

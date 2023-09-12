@@ -1,0 +1,47 @@
+.backgroundImageContainer {
+  width: 80%;
+  max-height: 65%;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  margin-top: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  animation-name: animatetop;
+  animation-duration: 0.4s;
+  -webkit-animation-name: animatetop;
+  -webkit-animation-duration: 0.4s;
+}
+
+.backgroundImageLabel {
+  font-weight: bold;
+  margin-top: 3.75px;
+  margin-right: 5px;
+}
+
+.backgroundImageSelect {
+  padding: 2.5px 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+.backgroundImageButton {
+  background-color: #5725fb;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+  width: 100%;
+}
+
+.backgroundImageButton:hover {
+  background-color: #4817e9;
+}

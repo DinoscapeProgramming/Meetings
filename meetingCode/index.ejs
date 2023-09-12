@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="A meetings app with lots of features">
+  <meta name="theme-color" content="#000000">
+  <title><%= title || "Meetings" %></title>
+  <% ["main", "apps", "attendees", "backgroundImages", "chalkboard", "chat", "invite", "keyboardShortcuts", "notifications", "recording", "settings", "surveys", "transcript"].forEach((styleFile) => {
+    %>
+      <link rel="stylesheet" href="<%= '/meetingCode/styles/' + styleFile + '.css' %>">
+    <%
+  }); %>
+  <link rel="icon" href="<%= icon?.url || '/public/favicon.png' %>" type="<%= icon?.type || 'image/png' %>" id="favicon">
+  <link rel="manifest" href="/manifest.json">
+  <link rel="apple-touch-icon" href="/public/favicon.png">
+  <script defer>
+    let username = "<%= username %>";
+    const meetingId = "<%= meetingId %>";
+    const password = "<%= password %>";
+    const host = <%= host %>;
+    const protocol = "<%= protocol %>";
+    const url = "<%= url %>";
+    const languages = JSON.parse("<%= languages %>".replaceAll("&#34;", '"'));
+    const isElectron = Boolean(window.require);
+  </script>
+  <script defer src="/socket.io/socket.io.js"></script>
+  <!-- <script defer src="https://unpkg.com/socket.io-stream@0.9.1/socket.io-stream.js"></script> -->
+  <!-- <script defer src="https://kit.fontawesome.com/c939d0e917.js"></script> -->
+  <script defer src="https://kit.fontawesome.com/865cf26aea.js"></script>
+  <script defer src="https://unpkg.com/peerjs@1.3.1/dist/peerjs.min.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@1.2"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/@tensorflow-models/body-pix@2.0"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/picmo@latest/dist/umd/index.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/ace-builds@1.12.5/src/ace.min.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/ace-builds@1.12.5/src/theme-monokai.min.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/ace-builds@1.12.5/src/mode-javascript.min.js"></script>
+  <% ["functions", "options", "eventListeners", "script"].forEach((scriptFile) => {
+    %>
+      <script defer src="<%= '/meetingCode/scripts/' + scriptFile + '.js' %>"></script>
+    <%
+  }); %>
+</head>
+<body>
+  <nav>
+    <a href="/" style="display: inline-block; margin-top: 57.5px;">
+      <img src="<%= icon?.url || '/public/logo.png' %>" class="logo" id="logo" style="display: block;" alt="Logo">
+    </a>
+    <ul class="navigationLinks">
+      <li>
+        <a href="/">Home</a>
+      </li>
+      <li>
+        <a href="/features">Features</a>
+      </li>
+      <li>
+        <a href="/appPortal">App Portal</a>
+      </li>
+      <li>
+        <a href="/desktopApp">Desktop App</a>
+      </li>
+      <li>
+        <a href="/newsletter">Newsletter</a>
+      </li>
+      <li>
+        <a href="/contact">Contact</a>
+      </li>
+    </ul>
+  </nav>
+  <div class="meeting">
+    <div class="topGroup">
+      <div class="videoGroup">
+        <div id="videoGrid" class="videoGrid">
+          <div id="videoGridUpperHolder" class="videoGridUpperHolder"></div>
+        </div>
+      </div>
+      <div class="options">
+        <div style="display: flex; flex-direction: row; position: absolute; left: 10px;">
+          <div id="stopVideoButton" class="optionButton" title="Stop Video">
+            <i class="fa fa-video-camera"></i>
+          </div>
+          <div id="muteAudioButton" class="optionButton" title="Mute Audio">
+            <i class="fa fa-microphone"></i>
+          </div>
+        </div>
+        <div id="openAttendeesButton" class="optionButton" title="Open Attendees">
+          <i class="fa fa-users"></i>
+        </div>
+        <div id="shareScreenButton" class="optionButton" title="Share Screen">
+          <i class="fa fa-desktop"></i>
+        </div>
+        <div id="shareFileButton" class="optionButton" title="Share File">
+          <i class="fa fa-file"></i>
+        </div>
+        <div id="openChatButton" class="optionButton" title="Open Chat">
+          <i class="fa fa-comments"></i>
+        </div>
+        <div id="recordMeetingButton" class="optionButton" title="Record Meeting">
+          <i class="fa fa-record-vinyl"></i>
+        </div>
+        <div id="openReactionsButton" class="optionButton" title="Open Reactions">
+          <i class="fa fa-face-smile" id="reactionIcon"></i>
+        </div>
+        <div id="inviteButton" class="optionButton" title="Invite">
+          <i class="fa fa-user-plus"></i>
+        </div>
+        <div>
+          <div style="display: flex; flex-direction: column; position: absolute; bottom: 10px; z-index: 1">
+            <div id="viewMoreButtonContainer" style="display: none; border-radius: 5px; flex-direction: row; padding: 7.5px; transform: translate(calc(-25% - 5px), -5px); background-color: #5469c7;">
+              <div>
+                <div id="openChalkboardButton" class="optionButton" title="Open Chalkboard" style="margin: 2px 2.5px 5px;">
+                  <i class="fa fa-chalkboard"></i>
+                </div>
+                <div id="openSurveysButton" class="optionButton" title="Open Surveys" style="margin: 0 2.5px 5px;">
+                  <i class="fa fa-square-poll-horizontal"></i>
+                </div>
+                <div id="openBackgroundImageButton" class="optionButton" title="Open Background Image" style="margin: 0 2.5px 5px;">
+                  <i class="fa fa-image"></i>
+                </div>
+                <div id="openTranscriptButton" class="optionButton" title="Open Transcript" style="margin: 0 2.5px 5px;">
+                  <i class="fa fa-file-audio"></i>
+                </div>
+                <div id="openKeyboardShortcutsButton" class="optionButton" title="Open Keyboard Shortcuts" style="margin: 0 2.5px 5px;">
+                  <i class="fa fa-keyboard"></i>
+                </div>
+                <div id="openNotificationsButton" class="optionButton" title="Open Notifications" style="margin: 0 2.5px 5px;">
+                  <i class="fa fa-bell"></i>
+                </div>
+              </div>
+              <div>
+                <div id="openAppStoreButton" class="optionButton" title="Open App Store" style="margin: 2px 2.5px 5px;">
+                  <i class="fa fa-mobile-screen"></i>
+                </div>
+                <div id="openPictureInPictureButton" class="optionButton" title="Open Picture in Picture" style="margin: 0 2.5px 5px;">
+                  <i class="fa fa-arrow-up-right-from-square"></i>
+                </div>
+                <div id="memoryButton" class="optionButton" style="display: <%= (isElectron) ? 'flex' : 'none' %>; margin: 0 2.5px 5px" title="Open Memory" style="margin: 0 2.5px 5px;">
+                  <i class="fa fa-database"></i>
+                </div>
+                <div id="openFullscreenButton" class="optionButton" title="Open Fullscreen" style="margin: 0 2.5px 5px;">
+                  <i class="fa-solid fa-expand"></i>
+                </div>
+                <% if (host) {
+                  %>
+                  <div id="openSettingsButton" class="optionButton" title="Open Settings" style="margin: 0 2.5px 5px;">
+                    <i class="fa fa-gear"></i>
+                  </div>
+                  <%
+                } %>
+                <div id="appButtons" style="display: flex; flex-direction: column;"></div>
+                <select id="videoSource" class="select" title="Camera" style="margin: 0 2.5px 5px;"></select>
+                <select id="audioSource" class="select" title="Microphone" style="margin: -0.5px 2.5px 5px;"></select>
+              </div>
+            </div>
+            <div id="viewMoreButton" class="optionButton" title="Invite">
+              <i class="fa fa-ellipsis-h"></i>
+            </div>
+          </div>
+        </div>
+        <div id="leaveMeetingButton" class="optionButton" title="Leave Meeting" style="position: absolute; right: 10px;">
+          <i class="fa fa-arrow-right-from-bracket"></i>
+        </div>
+      </div>
+    </div>
+    <div class="bottomGroup">
+      <div id="chalkboard" style="display: none; position: absolute; bottom: 78px;">
+        <canvas id="chalkboardCanvas" class="chalkboardCanvas" style="width: 100vw; height: 22.5vw;"></canvas>
+        <div class="chalkboardToolbar">
+          <div id="clearChalkboardCanvasButton" class="optionButton" title="Clear Chalkboard">
+            <i class="fa fa-trash"></i>
+          </div>
+          <input type="color" id="chalkboardCanvasColorInput" class="chalkboardCanvasInput" title="Color">
+          <input type="number" id="chalkboardCanvasLineWidth" class="chalkboardCanvasInput" title="Line Width" style="width: 90px; height: 38.25px; padding-left: 10px;">
+          <div id="viewChalkboardCanvasButton" class="optionButton" title="View Chalkboard">
+            <i class="fa fa-file-export"></i>
+          </div>
+          <div id="downloadChalkboardCanvasButton" class="optionButton" title="Download Chalkboard">
+            <i class="fa fa-file-arrow-down"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="popups">
+    <div id="chat" style="display: none;" class="popupBackgroundScreen">
+      <div class="chatContainer">
+        <section class="chatInterfaceSection">
+          <div style="display: flex; flex-direction: row;">
+            <label class="chatUserLabel">To:</label>
+            <select class="chatUserSelect" id="chatUserSelect">
+              <option value="all">Everyone</option>
+              <option><%= username %> (me)</option>
+            </select>
+          </div>
+          <div class="chatMessages" id="chatMessages">
+            <div data-type="all" style="display: block;">
+              <h3>No messages sent</h3>
+            </div>
+            <div data-type="specific" style="display: none;">
+              <h3>No messages sent</h3>
+            </div>
+          </div>
+          <div class="chatMessageInputContainer">
+            <input class="chatMessageInput" id="chatMessageInput" placeholder="Type your message...">
+            <button class="chatMessageButton" id="chatButton">Send</button>
+          </div>
+        </section>
+      </div>
+    </div>
+    <div id="surveys" style="display: none;" class="popupBackgroundScreen">
+      <div id="surveyContent" class="surveyContainer">
+        <div style="display: flex; flex-direction: column;">
+          <div style="display: flex; flex-direction: row;">
+            <button class="surveyMenuButton" id="surveyDisplayButton">Display</button>
+            <button class="surveyMenuButton" id="surveyEditorButton">Editor</button>
+          </div>
+          <div class="surveySectionContainer">
+            <div id="surveyDisplay" style="display: block;">
+              <h3>No surveys opened</h3>
+            </div>
+            <div id="surveyEditor" style="display: none;">
+              <input class="surveyInput" placeholder="Question" id="surveyEditorQuestionInput">
+              <div class="surveyEditorOptions" id="surveyEditorOptions"></div>
+              <button class="surveyButton" id="addSurveyOptionButton">Add option</button>
+              <button class="surveyButton" id="createSurveyButton">Create survey</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="attendees" style="display: none;" class="popupBackgroundScreen">
+      <div class="attendeeContainer">
+        <section class="attendeeInterfaceSection">
+          <ul id="attendeeContent">
+            <li>
+              <input value="<%= username %>">
+              <div class="optionButton" style="background-color: #007BFF; margin: 15px;" onclick="stopVideo();" title="Stop Video">
+                <i class="fa fa-video-camera" aria-hidden="true"></i>
+              </div>
+              <div class="optionButton" style="background-color: #007BFF; margin: 15px 15px 15px -12px;" onclick="muteAudio();" title="Mute Audio">
+                <i class="fa fa-microphone" aria-hidden="true"></i>
+              </div>
+              <div class="optionButton" style="background-color: #007BFF; margin: 15px 15px 15px -12px;" onclick="leaveMeeting();" title="Leave Meeting">
+                <i class="fa fa-arrow-right-from-bracket" aria-hidden="true"></i>
+              </div>
+            </li>
+          </ul>
+        </section>
+      </div>
+    </div>
+    <div id="recording" style="display: none;" class="popupBackgroundScreen">
+      <div id="recordingContent" class="recordingContainer">
+        <div style="display: flex; flex-direction: column;">
+          <button id="viewRecordingButton" class="recordingButton">View recording</button>
+          <button id="downloadRecordingButton" class="recordingButton">Download recording</button>
+          <button id="saveRecordingInCloudButton" class="recordingButton" style="margin: 0;">Save recording in cloud</button>
+        </div>
+      </div>
+    </div>
+    <div id="backgroundImage" style="display: none;" class="popupBackgroundScreen">
+      <div class="backgroundImageContainer">
+        <div style="display: flex; flex-direction: row;">
+          <label class="sliderContainer" style="margin: 0 15px 15px 0;">
+            <input type="checkbox" class="sliderInput" id="backgroundImageSlider">
+            <span class="slider"></span>
+          </label>
+          <div id="backgroundImageTypeContainer" style="display: none; margin-top: 5px;">
+            <label class="backgroundImageLabel">Background Type:</label>
+            <select class="backgroundImageSelect"id="backgroundImageTypeSelect">
+              <option value="blur">Blur</option>
+              <option value="none">Empty Layout</option>
+              <option value="virtual">Virtual</option>
+            </select>
+          </div>
+        </div>
+        <select class="backgroundImageSelect" id="backgroundImageMethodSelect" style="display: none;">
+          <option value="firstMethod">First Method</option>
+          <option value="secondMethod">Second Method (deprecated)</option>
+        </select>
+        <input id="backgroundImageInput" type="file" accept="image/*" ondragover="event.preventDefault();" ondrop="this.files = event.dataTransfer.files; event.preventDefault();" style="display: none; margin-bottom: 10px;">
+        <button class="backgroundImageButton" id="useBackgroundImageButton">Load</button>
+      </div>
+    </div>
+    <div id="transcript" style="display: none;" class="popupBackgroundScreen">
+      <div id="transcriptContent" class="transcriptContainer">
+        <div style="display: flex; flex-direction: row;">
+          <label class="transcriptLabel">Language:</label>
+          <select class="transcriptSelect" id="transcriptLanguageSelect" title="Language">
+            <% JSON.parse(languages).forEach(([language, languageCode]) => {
+              %>
+                <option value="<%= languageCode %>"><%= language %></option>
+              <%
+            }); %>
+          </select>
+        </div>
+        <div id="transcriptContentContainer" class="transcriptSectionContainer">
+          <h3>No transcript recorded</h3>
+        </div>
+        <button id="viewTranscriptButton" class="transcriptButton">View transcript</button>
+        <button id="downloadTranscriptButton" class="transcriptButton">Download transcript</button>
+        <button id="saveTranscriptInCloudButton" class="transcriptButton" style="margin: 0 0 -2.5px;">Save transcript in cloud</button>
+      </div>
+    </div>
+    <div id="keyboardShortcuts" style="display: none;" class="popupBackgroundScreen">
+      <div id="keyboardShortcutContent" class="keyboardShortcutContainer">
+        <div style="display: flex; flex-direction: column;">
+          <div id="keyboardShortcutContentContainer" class="keyboardShortcutSectionContainer">
+            <h3>No keyboard shortcuts created</h3>
+          </div>
+          <button id="addKeyboardShortcutContentButton" class="keyboardShortcutButton">Add keyboard shortcut</button>
+        </div>
+      </div>
+    </div>
+    <div id="notifications" style="display: none;" class="popupBackgroundScreen">
+      <div id="notificationContent" class="notificationContainer" style="max-height: 65vh; overflow-y: auto;">
+        <div style="display: flex; flex-direction: column;">
+          <div id="notificationContentContainer" class="notificationSectionContainer">
+            <h3>No notifications created</h3>
+          </div>
+          <button id="addNotificationContentButton" class="notificationButton">Add notification</button>
+          <button id="beepNotificationContentButton" class="notificationButton" style="display: <%= (isElectron) ? 'block' : 'none' %>"none">Beep</button>
+          <button id="sendNotificationContentButton" class="notificationButton" style="margin-bottom: -2.5px;">Send notification</button>
+        </div>
+      </div>
+    </div>
+    <div id="reactions" style="display: none;" class="popupBackgroundScreen">
+      <div id="reactionContent" style="display: inline-block; position: relative; top: 50%; left: 50%; transform: translate(-50%, -50%); animation-name: animatetop; animation-duration: 0.4s; -webkit-animation-name: animatetop; -webkit-animation-duration: 0.4s;"></div>
+    </div>
+    <div id="apps" style="display: none;" class="popupBackgroundScreen">
+      <div id="appContent" class="appContainer">
+        <div style="display: flex; flex-direction: column;">
+          <% Object.entries(apps).forEach(([appId, { iconType, name, description, verified }], index) => {
+            %>
+              <div data-app-id="<%= appId %>" class="appSectionContainer" style="<%= 'margin-bottom: ' + ((index === (Object.entries(apps).length - 1)) ? '0;' : '10px;') %>">
+                <div style="display: flex; flex-direction: row;">
+                  <img src="<%= '/apps/' + appId + '/icon.' + iconType %>" style="width: 90px; height: 90px; margin-top: 22.5px; margin-left: 7.5px;" onerror="this.remove();">
+                  <div style="display: flex; flex-direction: column; justify-content: center;">
+                    <h2 style="display: flex; justify-content: center; align-items: center; margin-bottom: <%= (verified) ? '15px' : 'revert' %>">
+                      <span><%= name %></span>
+                      <span style="display: <%= (verified) ? 'block' : 'none' %>; color: #26aac1; font-size: small; font-weight: lighter; border: 2px solid #1f9ba1c7; padding: 5px; margin: 7.5px 10px; border-radius: 5px; ">Verified</span>
+                    </h2>
+                    <p style="margin: -5px 15px 17.5px; line-height: 20px;"><%= description %></p>
+                  </div>
+                </div>
+                <button class="appButton">Install</button>
+              </div>
+            <%
+          }); %>
+        </div>
+      </div>
+    </div>
+    <div id="memory" style="display: none;" class="popupBackgroundScreen">
+      <div id="memoryContent" class="popupContainer">
+        <div style="display: flex; flex-direction: column;">
+          <div id="cpuUsage">
+            <p>CPU</p>
+            <h2 style="margin: -9.5px 15px 15px;"></h2>
+          </div>
+          <div id="memoryUsage" style="margin-top: -15px;">
+            <p>Memory</p>
+            <h2 style="margin: -9.5px 15px 15px;"></h2>
+          </div>
+          <div id="totalMemoryUsage" style="margin-top: -15px;">
+            <p>Total Memory</p>
+            <h2 style="margin: -9.5px 15px 15px;"></h2>
+          </div>
+        </div>
+      </div>
+    </div>
+    <% if (host) {
+      %>
+        <div id="settings" style="display: none;" class="popupBackgroundScreen">
+          <div id="settingsContent" class="settingsContainer">
+            <div style="display: flex; flex-direction: column;">
+              <div class="settingsSectionContainer" style="margin: 15px;">
+                <h2>Password</h2>
+                <div>
+                  <label class="sliderContainer">
+                    <input type="checkbox" class="sliderInput">
+                    <span class="slider"></span>
+                  </label>
+                  <input type="password" class="settingsInput" placeholder="Password" style="display: none;">
+                </div>
+              </div>
+              <div class="settingsSectionContainer" style="margin: 0 15px 15px;">
+                <h2>Icon</h2>
+                <div>
+                  <label class="sliderContainer">
+                    <input type="checkbox" class="sliderInput">
+                    <span class="slider"></span>
+                  </label>
+                  <input type="file" accept="image/*" style="display: none; margin-bottom: 5px;" ondragover="event.preventDefault();" ondrop="this.files = event.dataTransfer.files; let fileReader = new FileReader(); fileReader.addEventListener('load', () => { socket.emit('changeIcon', { icon: { type: this.files[0].type, url: fileReader.result } }); }); fileReader.readAsDataURL(this.files[0]); event.preventDefault();" title="Icon File">
+                </div>
+              </div>
+              <div class="settingsSectionContainer" style="margin: 0 15px 15px;">
+                <h2>Title</h2>
+                <div>
+                  <label class="sliderContainer">
+                    <input type="checkbox" class="sliderInput">
+                    <span class="slider"></span>
+                  </label>
+                  <input class="settingsInput" placeholder="Title" style="display: none;">
+                </div>
+              </div>
+              <div class="settingsSectionContainer" style="margin: 0 15px 15px;">
+                <h2>Text</h2>
+                <div>
+                  <label class="sliderContainer">
+                    <input type="checkbox" class="sliderInput">
+                    <span class="slider"></span>
+                  </label>
+                  <textarea class="settingsInput" placeholder="Text" style="display: none; font-family: sans-serif; height: 72.5px; resize: vertical;"></textarea>
+                </div>
+              </div>
+              <div class="settingsSectionContainer" style="margin: 0 15px 15px;">
+                <h2>Locked</h2>
+                <div>
+                  <label class="sliderContainer">
+                    <input type="checkbox" class="sliderInput">
+                    <span class="slider"></span>
+                  </label>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      <%
+    } %>
+    <div id="invite" style="display: none;" class="popupBackgroundScreen">
+      <div id="inviteContent" class="inviteContainer">
+        <div style="display: flex; flex-direction: column;">
+          <div class="inviteSectionContainer">
+            <h2>Meeting Id</h2>
+            <input class="inviteInput" value="<%= meetingId %>" readonly onclick="this.select();">
+          </div>
+          <div class="inviteSectionContainer">
+            <h2>Landing Page</h2>
+            <input class="inviteInput" value="<%= protocol + '://' + url + '/landingPage/' + meetingId %>" readonly onclick="this.select();">
+            <button class="inviteButton" onclick="openLandingPage();">Open</button>
+          </div>
+          <div class="inviteSectionContainer" style="margin: 0;">
+            <h2>E-Mail</h2>
+            <button class="inviteButton" onclick="openStandardEmail();">Open Standard E-Mail</button>
+            <button class="inviteButton" onclick="openGmail();">Open Gmail</button>
+            <button class="inviteButton" onclick="openYahooMail();">Open Yahoo Mail</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="appPopups"></div>
+  </div>
+</body>
+</html>

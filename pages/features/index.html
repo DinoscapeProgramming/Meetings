@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A meetings app with lots of features">
+    <meta name="theme-color" content="#000000">
+    <title>Meetings</title>
+    <link rel="stylesheet" href="/pages/features/style.css">
+    <link rel="icon" href="/public/favicon.png" type="image/png">
+    <link rel="manifest" href="/manifest.json">
+    <link rel="apple-touch-icon" href="/public/favicon.png">
+    <script defer>
+      const isElectron = Boolean(window.require);
+    </script>
+    <script defer src="/pages/features/script.js"></script>
+  </head>
+  <body>
+    <!-- <nav>
+      <a href="/" style="display: inline-block; margin-top: 57.5px;">
+        <img src="/public/logo.png" class="logo" id="logo" style="display: block;" alt="Logo">
+      </a>
+      <ul class="navigationLinks">
+        <li>
+          <a href="/">Home</a>
+        </li>
+        <li>
+          <a href="/features">Features</a>
+        </li>
+        <li>
+          <a href="/appPortal">App Portal</a>
+        </li>
+        <li>
+          <a href="/desktopApp">Desktop App</a>
+        </li>
+        <li>
+          <a href="/newsletter">Newsletter</a>
+        </li>
+        <li>
+          <a href="/contact">Contact</a>
+        </li>
+        <li>
+          <div class="navigationDropdown">
+            <button class="navigationDropdownButton">
+              <span>More</span>
+              <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="navigationDropdownContent">
+              <a href="#">App Portal</a>
+              <a href="#">Link 2</a>
+              <a href="#">Link 3</a>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </nav> -->
+    <nav>
+      <a href="/" style="display: inline-block; margin-top: 57.5px;">
+        <img src="/public/logo.png" class="logo" id="logo" style="display: block;" alt="Logo">
+      </a>
+      <ul class="navigationLinks">
+        <li>
+          <a href="/">Home</a>
+        </li>
+        <li>
+          <a href="/features">Features</a>
+        </li>
+        <li>
+          <a href="/appPortal">App Portal</a>
+        </li>
+        <li>
+          <a href="/desktopApp">Desktop App</a>
+        </li>
+        <li>
+          <a href="/newsletter">Newsletter</a>
+        </li>
+        <li>
+          <a href="/contact">Contact</a>
+        </li>
+      </ul>
+    </nav>
+    <h1>What Makes Us Special</h1>
+    <section id="advantages" class="features">
+      <div class="advantageCardContainer">
+        <div>
+          <img class="advantageCardImage" src="/public/features/participantViewingIcon.png" alt="Feature 2">
+          <div>
+            <h3>Participant Viewing</h3>
+            <p>See who's in the meeting</p>
+          </div>
+        </div>
+        <div>
+          <img class="advantageCardImage" src="/public/features/screenSharingIcon.png" alt="Feature 3" style="width: 135px;">
+          <div>
+            <h3>Screen Sharing</h3>
+            <p>Share your screen with others</p>
+          </div>
+        </div>
+        <div>
+          <img class="advantageCardImage" src="/public/features/fileSharingIcon.png" alt="Feature 3">
+          <div>
+            <h3>File Sharing</h3>
+            <p>Share files with meeting participants</p>
+          </div>
+        </div>
+      </div>
+      <div class="advantageCardContainer">
+        <div>
+          <img class="advantageCardImage" src="/public/features/chatIcon.png" alt="Feature 3">
+          <div>
+            <h3>Chatting</h3>
+            <p>Chat with others during the meeting</p>
+          </div>
+        </div>
+        <div>
+          <img class="advantageCardImage" src="/public/features/recordingIcon.jpg" alt="Feature 3">
+          <div>
+            <h3>Recording</h3>
+            <p>Record the meeting for later reference</p>
+          </div>
+        </div>
+        <div>
+          <img class="advantageCardImage" src="/public/features/reactionIcon.png" alt="Feature 3">
+          <div>
+            <h3>Reactions</h3>
+            <p>Express reactions during the meeting</p>
+          </div>
+        </div>
+      </div>
+      <div class="advantageCardContainer">
+        <div>
+          <img class="advantageCardImage" src="/public/features/inviteLandingPageIcon.webp" alt="Feature 3">
+          <div>
+            <h3>Invite Landing Pages</h3>
+            <p>Send invitations with landing pages</p>
+          </div>
+        </div>
+        <div>
+          <img class="advantageCardImage" src="/public/features/chalkboardIcon.png" alt="Feature 3">
+          <div>
+            <h3>Chalkboard</h3>
+            <p>Collaborative digital whiteboard</p>
+          </div>
+        </div>
+        <div>
+          <img class="advantageCardImage" src="/public/features/surveyIcon.png" alt="Feature 3">
+          <div>
+            <h3>Surveys</h3>
+            <p>Collect feedback with surveys</p>
+          </div>
+        </div>
+      </div>
+      <div class="advantageCardContainer">
+        <div>
+          <img class="advantageCardImage" src="/public/features/virtualBackgroundImageIcon.png" alt="Feature 3">
+          <div>
+            <h3>Virtual Background Images</h3>
+            <p>Change your background using newest AI Technology</p>
+          </div>
+        </div>
+        <div>
+          <img class="advantageCardImage" src="/public/features/transcriptIcon.png" alt="Feature 3">
+          <div>
+            <h3>Transcripts</h3>
+            <p>Get meeting voice transcripts</p>
+          </div>
+        </div>
+        <div>
+          <img class="advantageCardImage" src="/public/features/keyboardShortcutIcon.png" alt="Feature 3">
+          <div>
+            <h3>Keyboard Shortcuts</h3>
+            <p>Use keyboard shortcuts for efficiency</p>
+          </div>
+        </div>
+      </div>
+      <div class="advantageCardContainer">
+        <div>
+          <img class="advantageCardImage" src="/public/features/notificationIcon.png" alt="Feature 3">
+          <div>
+            <h3>Notifications</h3>
+            <p>Stay updated with notifications</p>
+          </div>
+        </div>
+        <div>
+          <img class="advantageCardImage" src="/public/features/appIcon.png" alt="Feature 3">
+          <div>
+            <h3>Apps</h3>
+            <p>Access additional integrated apps</p>
+          </div>
+        </div>
+        <div>
+          <img class="advantageCardImage" src="/public/features/pictureInPictureIcon.png" alt="Feature 3">
+          <div>
+            <h3>Picture-in-Picture View</h3>
+            <p>Miniature video view with video controls</p>
+          </div>
+        </div>
+      </div>
+      <div class="advantageCardContainer" style="margin-bottom: 25px;">
+        <div>
+          <img class="advantageCardImage" src="/public/features/fullscreenIcon.svg" alt="Feature 3">
+          <div>
+            <h3>Fullscreen</h3>
+            <p>Expand to fullscreen mode</p>
+          </div>
+        </div>
+        <div>
+          <img class="advantageCardImage" src="/public/features/settingsIcon.png" alt="Feature 3">
+          <div>
+            <h3>Settings</h3>
+            <p>Customize your meeting experience</p>
+          </div>
+        </div>
+        <div>
+          <img class="advantageCardImage" src="/public/features/deviceCustomizabilityIcon.png" alt="Feature 3">
+          <div>
+            <h3>Device Customizability</h3>
+            <p>Configure your devices as needed</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>

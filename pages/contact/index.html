@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A meetings app with lots of features">
+    <meta name="theme-color" content="#000000">
+    <title>Meetings</title>
+    <link rel="stylesheet" href="/pages/contact/style.css">
+    <link rel="icon" href="/public/favicon.png" type="image/png">
+    <link rel="manifest" href="/manifest.json">
+    <link rel="apple-touch-icon" href="/public/favicon.png">
+    <script defer>
+      const isElectron = Boolean(window.require);
+    </script>
+    <script defer src="/pages/contact/script.js"></script>
+  </head>
+  <body>
+    <nav>
+      <a href="/" style="display: inline-block; margin-top: 57.5px;">
+        <img src="/public/logo.png" class="logo" id="logo" style="display: block;" alt="Logo">
+      </a>
+      <ul class="navigationLinks">
+        <li>
+          <a href="/">Home</a>
+        </li>
+        <li>
+          <a href="/features">Features</a>
+        </li>
+        <li>
+          <a href="/appPortal">App Portal</a>
+        </li>
+        <li>
+          <a href="/desktopApp">Desktop App</a>
+        </li>
+        <li>
+          <a href="/newsletter">Newsletter</a>
+        </li>
+        <li>
+          <a href="/contact">Contact</a>
+        </li>
+      </ul>
+    </nav>
+    <div class="contactContainer">
+      <div>
+        <h1>Contact Us</h1>
+        <p>Talk to us by filling out the form to speak with our staff team</p>
+        <img class="contactImage" src="/public/contactImage.jpg">
+      </div>
+      <section class="contactFormSection">
+        <h2>Enter your details</h2>
+        <form id="contactForm">
+          <label>Name:</label>
+          <input type="text" id="contactFormNameInput" required>
+          <label>Email:</label>
+          <input type="email" id="contactFormEmailInput" required>
+          <label>Message:</label>
+          <textarea id="contactFormMessageInput" rows="6" required></textarea>
+          <button type="submit">Send Us a Message</button>
+        </form>
+      </section>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,101 @@
+.transcriptContainer {
+  width: 80%;
+  max-height: 80%;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  margin-top: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  animation-name: animatetop;
+  animation-duration: 0.4s;
+  -webkit-animation-name: animatetop;
+  -webkit-animation-duration: 0.4s;
+  overflow-y: auto;
+}
+
+.transcriptLabel {
+  font-weight: bold;
+  margin-top: 3.75px;
+  margin-right: 5px;
+}
+
+.transcriptSelect {
+  padding: 2.5px 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+.transcriptSectionContainer {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 0 20px 10px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  max-height: 60vh;
+  overflow-y: auto;
+  text-align: left;
+}
+
+.transcriptSectionContainer h3 {
+  margin: 25px 0 15.5px;
+}
+
+.transcriptSectionContainer p {
+  margin: 0;
+}
+
+.transcriptButton {
+  width: 100%;
+  background-color: #5725fb;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+  margin-bottom: 5px;
+}
+
+.transcriptButton:hover {
+  background-color: #4817e9;
+}
+
+.transcriptContentTranslateContainer {
+  display: flex;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+.transcriptContentTranslateSelect {
+  display: flex;
+  flex: 1;
+  padding: 7.5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.transcriptContentTranslateButton {
+  background-color: #007BFF;
+  color: white;
+  padding: 7.5px 20px;
+  border: none;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+  cursor: pointer;
+  margin-left: 7.5px;
+}
+
+.transcriptContentTranslateButton:hover {
+  background-color: #0056b3;
+}

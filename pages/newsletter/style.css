@@ -1,0 +1,99 @@
+html {
+  font-family: Montserrat, "Noto Sans Arabic", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+body {
+  background-color: #2d8cff;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  margin: 0;
+}
+
+.logo {
+  position: absolute;
+  top: 17.5px;
+  left: calc(calc(100% - 532.5px) / 2);
+  transform: translateX(-50%);
+  height: 50px;
+  object-fit: cover;
+}
+
+nav {
+  background-color: #333;
+  color: white;
+  padding: 10px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navigationLinks {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+  margin-right: 20px;
+}
+
+.navigationLinks li {
+  font-size: 16.5px;
+}
+
+.navigationLinks a {
+  text-decoration: none;
+  color: white;
+}
+
+header {
+  background-color: #0069ff;
+  color: white;
+  text-align: center;
+  padding: 5px;
+}
+
+.newsletterContainer {
+  padding: 10px 40px 20px 40px;
+  margin: 30px 40px;
+  background-color: #ffffff;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.newsletterFormSection {
+  text-align: center;
+}
+
+form {
+  margin-top: 20px;
+}
+
+label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+input[type="email"] {
+  width: 100%;
+  padding: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+  margin-bottom: 5px;
+  text-align: center;
+}
+
+button[type="submit"] {
+  background-color: #5725fb;
+  color: white;
+  padding: 10.5px 20px;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+  width: calc(100% + 2px);
+}
+
+button[type="submit"]:hover {
+  background-color: #4817e9;
+}
