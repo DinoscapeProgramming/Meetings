@@ -1,4 +1,9 @@
 node_modules
+.cache/
+.config/
+.upm/
+apps/
 .breakpoints
 .replit
 replit.nix
+replit_zip_error_log.txt
