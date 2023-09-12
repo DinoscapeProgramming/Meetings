@@ -9,12 +9,26 @@ At [Your Video Conferencing App], we are committed to providing you with an exce
 - **Cross-Platform:** Use our app on your preferred device – desktop, mobile, or tablet – with a seamless transition.
 
 ### Rich Features
-- **Powerful Collaboration:** Benefit from features like screen sharing, file sharing, virtual whiteboards, and more, making teamwork a breeze.
-- **High-Quality Video and Audio:** Enjoy crisp, clear video and audio quality, making every conversation feel like an in-person meeting.
+- **Participant Viewing:** Easily view all meeting participants in a grid or gallery layout, and switch between active speakers.
+- **Screen Sharing:** Share your screen to present documents, slideshows, or applications, and collaborate in real-time.
+- **File Sharing:** Seamlessly share files and documents during meetings, and access a shared repository of documents for easy reference.
+- **Chats:** Engage in text-based conversations with participants and create group chats for efficient discussions.
+- **Recordings:** Record your meetings for future reference or sharing with absent participants and store recordings securely.
+- **Reactions:** Express emotions and reactions using emojis, providing non-verbal feedback during discussions.
+- **Landing Pages:** Customize landing pages for scheduled meetings, including agendas, important information, and branding.
+- **Chalkboards:** Collaboratively draw and annotate on a shared virtual whiteboard to visualize ideas and concepts.
+- **Surveys:** Conduct polls and surveys during meetings, gather feedback, and make data-driven decisions.
+- **Virtual Background Images:** Choose from a library of virtual backgrounds or upload your own for privacy and professionalism.
+- **Transcripts:** Automatically generate meeting transcripts, search, review, and reference discussions effortlessly.
+- **Keyboard Shortcut Configuration:** Personalize keyboard shortcuts for convenience and increased productivity.
+- **Notifications:** Receive real-time notifications for meeting invitations, messages, and updates to stay informed and connected.
+- **Apps:** Integrate third-party applications for enhanced functionality and customize your workspace with your favorite tools.
+- **Picture-in-Picture View:** Enable picture-in-picture mode for multitasking during meetings and keep an eye on the video feed while using other features.
+- **Fullscreen Compatibility:** Optimize your viewing experience with fullscreen mode to eliminate distractions.
+- **Settings and Device Customizability:** Fine-tune platform settings to suit your preferences and customize audio, video, and other device settings.
 
 ### Personalization
 - **Customization:** Tailor your experience with personalized avatars, theme options, and notification settings.
-- **Virtual Backgrounds:** Add a touch of fun or professionalism to your meetings with our extensive virtual background library.
 
 ### Security and Privacy
 - **Data Protection:** Rest easy knowing that we prioritize your security and privacy with robust encryption and privacy controls.
