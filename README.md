@@ -9,7 +9,10 @@ At [Your Video Conferencing App], we are committed to providing you with an exce
 - **Cross-Platform:** Use our app on your preferred device – desktop, mobile, or tablet – with a seamless transition.
 
 ### Rich Features
-- **Participant Viewing:** Easily view all meeting participants in a grid or gallery layout, and switch between active speakers.
+
+####Participant Viewing
+- View all participants in a grid or gallery layout.
+- Easily switch between active speakers or focus on specific participants.
 - **Screen Sharing:** Share your screen to present documents, slideshows, or applications, and collaborate in real-time.
 - **File Sharing:** Seamlessly share files and documents during meetings, and access a shared repository of documents for easy reference.
 - **Chats:** Engage in text-based conversations with participants and create group chats for efficient discussions.
