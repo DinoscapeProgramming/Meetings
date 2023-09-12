@@ -1,8 +1,8 @@
 node_modules
-.cache/
-.config/
-.upm/
-apps/
+.cache
+.config
+.upm
+apps
 .breakpoints
 .replit
 replit.nix
