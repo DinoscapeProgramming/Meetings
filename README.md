@@ -50,6 +50,6 @@ Stay up to date with the latest news, updates, and tips:
 
 ## Need Help?
 
-If you have any questions or need assistance, our support team is here for you. Contact us through [Support Channel] or visit our [Support Center] for FAQs and resources.
+If you have any questions or need assistance, our support team is here for you. Contact us through [Our Support Center](https://meetings.gq/contact) for FAQs and resources.
 
-Thank you for choosing [Your Video Conferencing App]. We look forward to helping you connect and collaborate seamlessly!
+Thank you for choosing [Meetings](https://meetings.gq). We look forward to helping you connect and collaborate seamlessly!
