@@ -52,4 +52,4 @@ Stay up to date with the latest news, updates, and tips:
 
 If you have any questions or need assistance, our support team is here for you. Contact us through [Our Support Center](https://meetings.gq/contact) for FAQs and resources.
 
-Thank you for choosing [Meetings](https://meetings.gq). We look forward to helping you connect and collaborate seamlessly!
+Thank you for choosing [Meetings](https://meetings.gq). We are looking forward to help you connect and collaborate seamlessly!
