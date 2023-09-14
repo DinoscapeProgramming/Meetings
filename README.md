@@ -28,7 +28,7 @@ At [Your Video Conferencing App], we are committed to providing you with an exce
 
 Ready to start using [Meetings](https://meetings.gq)? Here's what you can do:
 
-1. **Open Site** Open our website or install our desktop application
+1. **Open Site** Open our [website](https://meetings.gq) or install our [desktop application](https://github.com/DinoscapeProgramming/Meetings-Desktop-Application)
 
 2. **Explore Features:** Take a tour of the platform and discover all the powerful features at your disposal.
 
