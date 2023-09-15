@@ -2,7 +2,7 @@
 
 ## Why Choose Us?
 
-At [Your Video Conferencing App], we are committed to providing you with an exceptional and engaging video conferencing experience. Here's why you should choose our platform:
+At [Meetings](https://meetings.gq), we are committed to providing you with an exceptional and engaging video conferencing experience. Here's why you should choose our platform:
 
 ### Seamlessness and Convenience
 - **Intuitive Design:** Our user-friendly interface ensures that you can quickly and easily navigate the platform.
