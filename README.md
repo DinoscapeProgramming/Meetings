@@ -38,7 +38,7 @@ Ready to start using [Meetings](https://meetings.gq)? Here's what you can do:
 
 5. **Personalize:** Set your favorite virtual background, and configure notifications or keyboard shortcuts according to your preferences.
 
-7. **Security:** Explore our robust security settings and privacy options for peace of mind.
+6. **Security:** Explore our robust security settings and privacy options for peace of mind.
 
 ## Stay Connected and Informed
 
