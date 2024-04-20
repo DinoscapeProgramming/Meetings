@@ -1,7 +1,3 @@
-[
-  [""]
-]
-
 if (isElectron) {
   window.addEventListener("offline", () => {
     require("electron").ipcRenderer.send("noInternetConnection");
